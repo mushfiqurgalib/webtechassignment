@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "FullName: " . $row["FullName"]. " - Name: " . $row["UserName"]. " " . $row["email"]. " ".$row["password"]."<br>";
+    #echo "FullName: " . $row["FullName"]. " - Name: " . $row["UserName"]. " " . $row["email"]. " ".$row["password"]."<br>";
   }
 } else {
   echo "0 results";}
@@ -37,7 +37,8 @@ $id=mysqli_real_escape_string($conn,$_POST['password']);
       include('welcome.html');
     }
   } else {
-    echo "wrong";
+    echo "Wrong credentials";
+    include('loginform.html');
   }
 
 ?>
