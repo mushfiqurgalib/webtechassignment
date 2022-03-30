@@ -37,7 +37,7 @@ $id=mysqli_real_escape_string($conn,$_POST['password']);
       include('welcome.html');
     }
   } else {
-    echo "Wrong credentials";
+    echo "<b>Wrong credentials.</b>"."<br>"."<br><b>Try Again</b>";
     include('loginform.html');
   }
 
